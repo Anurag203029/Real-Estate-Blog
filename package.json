@@ -1,0 +1,20 @@
+{
+  "name": "propertymission",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "concurrently \"npm run backend\" \"npm run ui\"",
+    "ui": "cd frontend && npm run dev",
+    "backend": "cd backend && npm run start",
+    "packages": "concurrently \"npm run backend:packages\" \"npm run ui:packages\"",
+    "ui:packages": "cd frontend && npm i",
+    "backend:packages": "cd backend && npm i"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "concurrently": "^9.1.0"
+  }
+}
