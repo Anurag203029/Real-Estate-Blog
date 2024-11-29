@@ -17,8 +17,15 @@ const Footer = () => {
             PropertyMission24x7 is your trusted real estate partner in the
             Tricity area, specializing in buying, selling, renting, and
             financial services. Located in Panchkula, we are available 24x7 at
-            <span> +91 7015433569 </span> or Propertymission81@gmail.com. We prioritize your
-            privacy and security in all transactions.
+            <span>
+              {" "}
+              <a href="tel:+917015433569">7015433569</a>{" "}
+            </span>{" "}
+            or{" "}
+            <a href="mailto:propertymission81@gmail.com">
+              propertymission81@gmail.com
+            </a>
+            . We prioritize your privacy and security in all transactions.
           </p>
         </div>
 
@@ -36,7 +43,7 @@ const Footer = () => {
                 About
               </a>
             </li>
-            
+
             <li>
               <a href="/contact" className="hover:underline">
                 Contact
@@ -44,7 +51,7 @@ const Footer = () => {
             </li>
             <li>
               <a href="/PrivacyPolicy" className="hover:underline">
-               Privacy & Policy
+                Privacy & Policy
               </a>
             </li>
           </ul>
@@ -52,7 +59,7 @@ const Footer = () => {
 
         {/* More Links */}
         <div className="text-center lg:text-left">
-          <h3 className="mb-4 text-lg font-bold">Additional  Services</h3>
+          <h3 className="mb-4 text-lg font-bold">Additional Services</h3>
           <ul className="space-y-2">
             <li>
               <p>Mutual Funds </p>
@@ -60,7 +67,6 @@ const Footer = () => {
             <li>
               <p>Loan</p>
             </li>
-            
           </ul>
         </div>
 
@@ -69,25 +75,23 @@ const Footer = () => {
           <h3 className="mb-4 text-lg font-bold">Quick Connect</h3>
           <p className="text-gray-700"></p>
           <p className="text-gray-700">
-          <b>Address: </b> Brar Complex, Patiala Road, Zirakpur - 140603
+            <b>Address: </b> Brar Complex, Patiala Road, Zirakpur - 140603
           </p>
           <p className="text-gray-700">
-  <b>Phone</b>: 
-  <a href="tel:+917015433569" >
-    +91 7015433569
-  </a>
-</p>
+            <b>Phone</b>:<a href="tel:+917015433569">+91 7015433569</a>
+          </p>
 
           <div className="flex">
-          <p><b>Email:</b>  </p>
-          <p className="text-gray-700">
-  <a href="mailto:Propertymission81@gmail.com" >
-    &nbsp;Propertymission81@gmail.com
-  </a>
-</p>
-
+            <p>
+              <b>Email:</b>{" "}
+            </p>
+            <p className="text-gray-700">
+              <a href="mailto:propertymission81@gmail.com">
+                &nbsp;propertymission81@gmail.com
+              </a>
+            </p>
           </div>
-          <SocialMediaLinks/>
+          <SocialMediaLinks />
         </div>
       </div>
 

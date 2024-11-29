@@ -77,17 +77,17 @@ const Contact = () => {
             <div className="mb-4">
               <h3 className="font-bold">Phone:</h3>
               <p className="flex items-center gap-2">
-                <FaPhoneAlt /><a href="tel:+917015433569" >
-    +91 7015433569
-  </a>
+                <FaPhoneAlt />
+                <a href="tel:+917015433569">+91 7015433569</a>
               </p>
             </div>
             <div className="mb-4">
               <h3 className="font-bold">Email:</h3>
               <p className="flex items-center gap-2">
-                <MdEmail /> <a href="mailto:Propertymission81@gmail.com" >
-    &nbsp;Propertymission81@gmail.com
-  </a>
+                <MdEmail />{" "}
+                <a href="mailto:propertymission81@gmail.com">
+                  &nbsp;propertymission81@gmail.com
+                </a>
               </p>
               <p className="text-sm text-gray-600">
                 We’ll get back to you as soon as possible.

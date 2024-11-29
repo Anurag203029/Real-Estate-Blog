@@ -236,11 +236,19 @@ const Register = () => {
               </button>
             </div>
           </form>
+          <div>
+            <p className="text-sm text-center text-gray-500 mt-3 ">OR</p>
+          </div>
 
-          <div className="mt-4">
-            {/* <button className="flex items-center justify-center w-full px-4 py-2 text-white bg-red-600 rounded-lg shadow-md hover:bg-red-500">
-              <span className="mr-2">Sign in with Google</span>
-            </button> */}
+          <div>
+            <p className="text-sm text-gray-500 text-center ">
+              Already registered?{" "}
+              <a href="/signin " className="text-blue-500 mt-2">
+                Signin
+              </a>
+            </p>
+          </div>
+          <div className="mt-2">
             <button
               type="button"
               class="login-with-google-btn flex items-center justify-center w-full px-4 py-2"
