@@ -12,7 +12,7 @@ import {
   Button,
 } from "@mui/material";
 import axios from "axios";
-import { toast } from "react-toastify";
+import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Select from "react-select"; // Import react-select
 
@@ -218,6 +218,7 @@ const Enquires = () => {
       </Box>
     </Box>
   );
+  <ToastContainer />;
 };
 
 export default Enquires;
