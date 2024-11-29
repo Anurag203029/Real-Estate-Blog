@@ -101,8 +101,9 @@ const PropertyDetail = () => {
     type,
     status,
     property_map,
+    property_location_map,
     property_video,
-    rating, // Assuming the API returns a rating field between 1 and 5
+    rating,
   } = property;
 
   const extractVideoId = (url) => {
@@ -114,7 +115,6 @@ const PropertyDetail = () => {
 
   const videoId = extractVideoId(property_video);
 
-  // Carousel configuration for map images
   const mapCarouselResponsive = {
     desktop: { breakpoint: { max: 3000, min: 1024 }, items: 3 },
     tablet: { breakpoint: { max: 1024, min: 464 }, items: 2 },
@@ -347,6 +347,35 @@ const PropertyDetail = () => {
           ></iframe>
         </div>
       )}
+
+      {/* Property Location Map Images */}
+      {property_location_map && property_location_map.length > 0 && (
+        <div className="mb-4">
+          {property_location_map.map((mapImage, index) => (
+            <div
+              key={index}
+              className={`p-2 ${index === 0 ? "full-image" : "stacked-image"}`}
+              style={
+                index === 0
+                  ? { height: "100vh", width: "100vw", overflow: "hidden" }
+                  : { maxHeight: "200px", textAlign: "center" }
+              }
+            >
+              <img
+                src={mapImage}
+                style={{
+                  objectFit: "cover",
+                  height: index === 0 ? "100%" : "auto",
+                  width: index === 0 ? "100%" : "auto",
+                }}
+                className="rounded img-fluid"
+                alt={`Map ${index + 1}`}
+              />
+            </div>
+          ))}
+        </div>
+      )}
+
       <Contact1 name={name} />
     </div>
   );
