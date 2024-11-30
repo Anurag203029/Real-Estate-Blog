@@ -62,6 +62,9 @@ const Footer = () => {
           <h3 className="mb-4 text-lg font-bold">Additional Services</h3>
           <ul className="space-y-2">
             <li>
+              <p>Interior Design</p>
+            </li>
+            <li>
               <p>Mutual Funds </p>
             </li>
             <li>
@@ -75,7 +78,7 @@ const Footer = () => {
           <h3 className="mb-4 text-lg font-bold">Quick Connect</h3>
           <p className="text-gray-700"></p>
           <p className="text-gray-700">
-            <b>Address: </b> Brar Complex, Patiala Road, Zirakpur - 140603
+            <b>Address: </b>House No. 1450, Sector 15, Panchkula
           </p>
           <p className="text-gray-700">
             <b>Phone</b>:<a href="tel:+917015433569">+91 7015433569</a>
