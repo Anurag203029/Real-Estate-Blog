@@ -8,7 +8,7 @@ const Navbar2 = () => {
   const [isAuthenticated, setIsAuthenticated] = useState(
     !!sessionStorage.getItem("token")
   );
-  const [enquiry,setenquiry]=useState();
+  const [enquiry, setenquiry] = useState();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const navigate = useNavigate();
 
@@ -21,17 +21,18 @@ const Navbar2 = () => {
         if (response.status === 200) {
           setenquiry(response.data.unreadCount);
           if (response.data.unreadCount > 0) {
-            toast.info(`You have ${response.data.unreadCount} unread enquiries.`);
+            toast.info(
+              `You have ${response.data.unreadCount} unread enquiries.`
+            );
           }
         }
       } catch (error) {
         console.error("Error fetching enquiries:", error);
       }
     };
-  
+
     fetchUnreadEnquiries();
   }, []);
-  
 
   useEffect(() => {
     const handleStorageChange = () => {
@@ -181,8 +182,10 @@ const Navbar2 = () => {
                     className="flex  justify-between block px-4 py-2 px-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-white"
                     onClick={closeMobileMenu}
                   >
-                        Enquiries <span className="bg-gray-500 text-white text-sm px-2  py- rounded-full">{enquiry}</span>
-
+                    Enquiries{" "}
+                    <span className="bg-gray-500 text-white text-sm px-2  py- rounded-full">
+                      {enquiry}
+                    </span>
                   </Link>
                 </li>
               </ul>
@@ -222,6 +225,7 @@ const Navbar2 = () => {
           </ul>
         </div>
       </div>
+      <ToastContainer />
     </nav>
   );
 };
