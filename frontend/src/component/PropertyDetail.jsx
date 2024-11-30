@@ -318,6 +318,7 @@ const PropertyDetail = () => {
             keyBoardControl={false}
             transitionDuration={500}
             containerClass="carousel-container"
+            arrows={false}
           >
             {property_map.map((mapImage, index) => (
               <div key={index} className="p-2">
@@ -350,23 +351,22 @@ const PropertyDetail = () => {
 
       {/* Property Location Map Images */}
       <div className="">
-      {property_location_map && property_location_map.length > 0 && (
-  <div className="property-location-map mb-4 grid grid-cols-1 md:grid-cols gap-4  ">
-    {property_location_map.map((mapImage, index) => (
-      <div key={index} className="map-image-wrapper">
-        <img
-          src={mapImage}
-          className="rounded img-fluid  object-cover h-[80vh] w-full"
-          alt={`Location Map ${index + 1}`}
-        />
+        {property_location_map && property_location_map.length > 0 && (
+          <div className="property-location-map mb-4 grid grid-cols-1 md:grid-cols gap-4  ">
+            {property_location_map.map((mapImage, index) => (
+              <div key={index} className="map-image-wrapper">
+                <img
+                  src={mapImage}
+                  className="rounded img-fluid  object-cover h-[80vh] w-full"
+                  alt={`Location Map ${index + 1}`}
+                />
+              </div>
+            ))}
+          </div>
+        )}
       </div>
-    ))}
-  </div>
-)}
 
-      </div>
-
-<Contact1 name={name} />
+      <Contact1 name={name} />
     </div>
   );
 };
