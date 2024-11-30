@@ -349,38 +349,24 @@ const PropertyDetail = () => {
       )}
 
       {/* Property Location Map Images */}
-      <div className="z">
-        {property_location_map && property_location_map.length > 0 && (
-          <div className="mb-4">
-            {property_location_map.map((mapImage, index) => (
-              <div
-                key={index}
-                className={`p-2 ${
-                  index === 0 ? "full-image" : "stacked-image"
-                }`}
-                style={
-                  index === 0
-                    ? { height: "100vh", width: "100vw", overflow: "hidden" }
-                    : { maxHeight: "200px", textAlign: "center" }
-                }
-              >
-                <img
-                  src={mapImage}
-                  style={{
-                    objectFit: "cover",
-                    height: index === 0 ? "100%" : "auto",
-                    width: index === 0 ? "100%" : "auto",
-                  }}
-                  className="rounded img-fluid"
-                  alt={`Map ${index + 1}`}
-                />
-              </div>
-            ))}
-          </div>
-        )}
+      <div className="">
+      {property_location_map && property_location_map.length > 0 && (
+  <div className="property-location-map mb-4 grid grid-cols-1 md:grid-cols gap-4  ">
+    {property_location_map.map((mapImage, index) => (
+      <div key={index} className="map-image-wrapper">
+        <img
+          src={mapImage}
+          className="rounded img-fluid  object-cover h-[80vh] w-full"
+          alt={`Location Map ${index + 1}`}
+        />
+      </div>
+    ))}
+  </div>
+)}
+
       </div>
 
-      <Contact1 name={name} />
+<Contact1 name={name} />
     </div>
   );
 };

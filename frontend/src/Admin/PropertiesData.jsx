@@ -328,6 +328,7 @@ const PropertiesData = () => {
                   <TableCell>{row.type}</TableCell>
                   <TableCell>{row.status}</TableCell>
                   <TableCell>
+                    <div className="flex">
                     <Button
                       variant="outlined"
                       color="primary"
@@ -348,6 +349,7 @@ const PropertiesData = () => {
                     >
                       Delete
                     </Button>
+                    </div>
                   </TableCell>
                 </TableRow>
               ))}
