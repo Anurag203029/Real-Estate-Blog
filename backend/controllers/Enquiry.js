@@ -4,10 +4,7 @@ const Enquiry = require("../models/Enquiry");
 exports.addEnquiry = async (req, res) => {
   try {
     const { name, phone, email, message } = req.body;
-    console.log(req.body);
     const nameRegex = /^[a-zA-Z\s]+$/;
-    const phoneRegex = /^\+?[1-9]\d{1,14}$/;
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!name || !phone || !message) {
       return res
         .status(400)
