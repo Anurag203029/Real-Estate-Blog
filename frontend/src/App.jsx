@@ -71,36 +71,36 @@ const App = () => {
     !excludePopupPaths.includes(location.pathname) && role !== "admin";
 
   // Disable right-click
-  // document.addEventListener("contextmenu", (event) => event.preventDefault());
+  document.addEventListener("contextmenu", (event) => event.preventDefault());
 
-  // // Disable F12, Ctrl+Shift+I, Ctrl+Shift+J, and Ctrl+U
-  // document.onkeydown = (event) => {
-  //   if (
-  //     event.key === "F12" ||
-  //     (event.ctrlKey &&
-  //       event.shiftKey &&
-  //       (event.key === "I" || event.key === "J")) ||
-  //     (event.ctrlKey && event.key === "U")
-  //   ) {
-  //     event.preventDefault();
-  //   }
-  // };
+  // Disable F12, Ctrl+Shift+I, Ctrl+Shift+J, and Ctrl+U
+  document.onkeydown = (event) => {
+    if (
+      event.key === "F12" ||
+      (event.ctrlKey &&
+        event.shiftKey &&
+        (event.key === "I" || event.key === "J")) ||
+      (event.ctrlKey && event.key === "U")
+    ) {
+      event.preventDefault();
+    }
+  };
 
-  // const detectDevToolsByConsole = () => {
-  //   const startTime = new Date();
+  const detectDevToolsByConsole = () => {
+    const startTime = new Date();
 
-  //   debugger; // This triggers a pause if DevTools is open
-  //   const endTime = new Date();
+    debugger; // This triggers a pause if DevTools is open
+    const endTime = new Date();
 
-  //   // If DevTools is open, the `debugger` statement causes a noticeable delay
-  //   if (endTime - startTime > 100) {
-  //     alert("DevTools are open. Please close them to continue.");
-  //     sessionStorage.clear();
-  //     window.location.href = "/Signin";
-  //   }
-  // };
+    // If DevTools is open, the `debugger` statement causes a noticeable delay
+    if (endTime - startTime > 100) {
+      alert("DevTools are open. Please close them to continue.");
+      sessionStorage.clear();
+      window.location.href = "/Signin";
+    }
+  };
 
-  // setInterval(detectDevToolsByConsole, 0);
+  setInterval(detectDevToolsByConsole, 0);
 
   return (
     <div className="flex flex-col min-h-screen">
