@@ -5,8 +5,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "concurrently \"npm run backend\" \"npm run ui\"",
+    "production": "concurrently \"npm run server\" \"npm run ui\"",
     "ui": "cd frontend && npm run dev",
     "backend": "cd backend && npm run start",
+    "server": "cd backend && npm run server",
     "packages": "concurrently \"npm run backend:packages\" \"npm run ui:packages\"",
     "ui:packages": "cd frontend && npm i",
     "backend:packages": "cd backend && npm i"
