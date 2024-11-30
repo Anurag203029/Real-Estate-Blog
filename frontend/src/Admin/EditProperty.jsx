@@ -23,7 +23,7 @@ const EditProperty = () => {
   const navigate = useNavigate();
 
   const propertyData = location.state?.property || {};
-  
+  console.log(propertyData.data);
 
   const [name, setName] = useState(propertyData.name || "");
   const [description, setDescription] = useState(
@@ -35,6 +35,8 @@ const EditProperty = () => {
   const [propertyVideo, setPropertyVideo] = useState(
     propertyData.property_video || ""
   );
+  console.log(propertyVideo);
+
   const [price, setPrice] = useState(propertyData.price || "");
   const [area, setArea] = useState(propertyData.area || "");
   const [propertyLocation, setPropertyLocation] = useState(
@@ -50,8 +52,6 @@ const EditProperty = () => {
   );
   const [ratingName, setRatingName] = useState();
   const [ratingValue, setRatingValue] = useState();
-
-  
 
   const VisuallyHiddenInput = styled("input")({
     clip: "rect(0 0 0 0)",
@@ -326,6 +326,20 @@ const EditProperty = () => {
                 </Button>
               </Grid>
             </Grid>
+          </Grid>
+
+          <Grid item xs={12}>
+            <TextField
+              id="propertyVideo"
+              value={propertyVideo}
+              onChange={(e) => setPropertyVideo(e.target.value)}
+              label="propertyVideo"
+              type="text"
+              variant="standard"
+              fullWidth
+              required
+              margin="normal"
+            />
           </Grid>
 
           <Grid item xs={12}>
