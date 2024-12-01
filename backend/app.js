@@ -4,16 +4,21 @@ const cors = require("cors");
 const session = require("express-session");
 const upload = require("express-fileupload");
 const cookieParser = require("cookie-parser");
+const path = require("path");
 require("dotenv").config();
+const app = express();
+const port = process.env.PORT || 3000;
+
+const _dirname = path.dirname("");
+const buildpath = path.join(_dirname, "../frontend/dist");
+app.use(express.static(buildpath));
 
 const users = require("./routes/Users");
 const enquiries = require("./routes/Enquiry");
 const property = require("./routes/Property");
 const connectDB = require("./config/db");
 connectDB();
-const app = express();
 
-const port = process.env.PORT || 3000;
 app.use(cookieParser());
 
 app.use(express.urlencoded({ extended: true }));
