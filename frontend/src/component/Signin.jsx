@@ -31,7 +31,6 @@ const Signin = () => {
       );
       if (response.status === 200) {
         const role = response.data.role;
-        console.log(role);
         const encryptedRole = CryptoJS.AES.encrypt(role, secretKey).toString();
         const token = accessToken;
         sessionStorage.setItem("token", token);
@@ -92,13 +91,7 @@ const Signin = () => {
 
           // Navigate based on user role
           setTimeout(() => {
-            if (user.role === "admin") {
-              navigate("/admin");
-            } else {
-              navigate("/");
-            }
-
-            // Optional: reload to reflect the new user state in the app
+            navigate("/");
             window.location.reload();
           }, 2000);
         } else {

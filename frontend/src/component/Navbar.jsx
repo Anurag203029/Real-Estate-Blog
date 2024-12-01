@@ -26,7 +26,9 @@ const Navbar = () => {
   useEffect(() => {
     const fetchCategories = async () => {
       try {
-        const response = await axios.get(`${import.meta.env.VITE_API_ROUTE}/property/propertyTypeAdd`);
+        const response = await axios.get(
+          `${import.meta.env.VITE_API_ROUTE}/property/propertyTypeAdd`
+        );
         setCategories(response.data.propertyTypes);
       } catch (error) {
         console.error("Error fetching categories:", error);
@@ -39,7 +41,7 @@ const Navbar = () => {
   const handleLogout = () => {
     sessionStorage.removeItem("token");
     setIsAuthenticated(false);
-    navigate("/Signin");
+    navigate("/");
     window.location.reload();
   };
 
@@ -162,7 +164,7 @@ const Navbar = () => {
                   Signup
                 </Link>
                 <Link
-                  to="/Signin"
+                  to="/login"
                   className="px-3 py-2 text-white hover:text-blue-500"
                   onClick={closeMenu}
                 >

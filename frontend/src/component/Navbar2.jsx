@@ -50,7 +50,7 @@ const Navbar2 = () => {
     sessionStorage.removeItem("token");
     sessionStorage.removeItem("userRole");
     setIsAuthenticated(false);
-    navigate("/Signin");
+    navigate("/");
     window.location.reload();
   };
 

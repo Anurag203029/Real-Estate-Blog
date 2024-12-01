@@ -118,7 +118,7 @@ const Register = () => {
   };
 
   return (
-    <div className="w-auto flex items-center justify-center    sm:px-10 md:px-20  lg:px-32 sm:w-full ">
+    <div className="w-auto flex items-center justify-center sm:px-10 md:px-20  lg:px-32 sm:w-full ">
       <ToastContainer />
       <div className="flex w-full max-w-sm overflow-hidden bg-white border rounded-lg shadow-lg lg:max-w-4xl">
         <div
@@ -243,7 +243,7 @@ const Register = () => {
           <div>
             <p className="text-sm text-gray-500 text-center ">
               Already registered?{" "}
-              <a href="/signin " className="text-blue-500 mt-2">
+              <a href="/login " className="text-blue-500 mt-2">
                 Signin
               </a>
             </p>

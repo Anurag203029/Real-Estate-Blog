@@ -9,10 +9,6 @@ require("dotenv").config();
 const app = express();
 const port = process.env.PORT || 3000;
 
-const _dirname = path.dirname("");
-const buildpath = path.join(_dirname, "../frontend/dist");
-app.use(express.static(buildpath));
-
 const users = require("./routes/Users");
 const enquiries = require("./routes/Enquiry");
 const property = require("./routes/Property");
@@ -40,6 +36,14 @@ app.use(
 app.use("/users", users);
 app.use("/enquiry", enquiries);
 app.use("/property", property);
+
+if (process.env.NODE_ENV === "production") {
+  const buildPath = path.join(__dirname, "../frontend/dist");
+  app.use(express.static(buildPath));
+  app.get("*", (req, res) => {
+    res.sendFile(path.join(buildPath, "index.html"));
+  });
+}
 
 app.listen(port, () =>
   console.log(`Server is running on http://localhost:${port}`)
