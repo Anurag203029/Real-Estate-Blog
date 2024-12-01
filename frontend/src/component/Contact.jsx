@@ -60,6 +60,7 @@ const Contact = () => {
   };
 
   return (
+    // NPM
     <div
       className="min-h-screen flex flex-col items-center justify-center px-4 py-8 bg-gray-900 text-gray-100 bg-cover bg-center bg-no-repeat"
       style={{
