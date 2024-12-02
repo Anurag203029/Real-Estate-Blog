@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import logo from "../assets/logo.png";
+import logo from "../assets/Logo.png";
 import axios from "axios";
 
 const Navbar = () => {
@@ -95,7 +95,7 @@ const Navbar = () => {
           } w-full md:block md:w-auto`}
           id="navbar"
         >
-          <ul className="flex flex-col items-center space-y-4 font-medium md:flex-row md:space-x-8 md:space-y-0">
+          <ul className="flex flex-col items-center space-y-4 font-medium md:flex-row md:space-x-8 md:space-y-0 text-white">
             <li>
               <Link
                 to="/"
@@ -118,12 +118,12 @@ const Navbar = () => {
               <span className="px-3 py-2 text-white cursor-pointer hover:text-blue-500">
                 All Categories
               </span>
-              <ul className="absolute z-10 hidden w-48 p-1 mt-2 bg-gray-700 rounded-lg shadow-lg group-hover:block">
+              <ul className="absolute z-10 hidden w-48 p-1 mt-1 bg-gray-700 text-white rounded-lg shadow-lg group-hover:block">
                 {categories.map((category) => (
                   <li key={category._id}>
                     <Link
                       to={`/category/${category._id}`}
-                      className="block px-4 py-2 text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-white"
+                      className="block px-4 py-2 text-white hover:bg-gray-500 dark:hover:bg-gray-600 dark:text-white"
                       onClick={closeMenu}
                     >
                       {category.type_name}

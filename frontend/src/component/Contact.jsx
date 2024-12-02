@@ -3,7 +3,6 @@ import { FaPhoneAlt } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import "../Style/contact.css";
 import SocialMediaLinks from "./SocialMediaLinks";
 import axios from "axios";
 
@@ -61,7 +60,15 @@ const Contact = () => {
   };
 
   return (
-    <div className="contact-background   bg-gray-900 text-gray-100 min-h-screen flex flex-col items-center justify-center px-4 py-8 ">
+    // NPM
+    <div
+      className="min-h-screen flex flex-col items-center justify-center px-4 py-8 bg-gray-900 text-gray-100 bg-cover bg-center bg-no-repeat"
+      style={{
+        backgroundImage:
+          'linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("https://www.goldfishre.com.au/img/about-us.jpg")',
+      }}
+    >
+      {" "}
       <ToastContainer />
       <div className="max-w-6xl w-full">
         <h1 className="text-3xl font-bold text-center mb-6">Contact Us</h1>

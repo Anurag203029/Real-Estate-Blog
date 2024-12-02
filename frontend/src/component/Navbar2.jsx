@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import logo from "../assets/logo.png";
+import logo from "../assets/Logo.png";
 import axios from "axios";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -111,11 +111,11 @@ const Navbar2 = () => {
           } w-full md:block md:w-auto`}
           id="navbar-solid-bg"
         >
-          <ul className="flex flex-col font-medium rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-transparent dark:bg-gray-800 md:dark:bg-transparent dark:border-gray-700">
+          <ul className="text-white flex flex-col font-medium rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-transparent dark:bg-gray-800 md:dark:bg-transparent dark:border-gray-700">
             <li>
               <Link
                 to="/"
-                className="block px-3 py-2 text-gray-900 rounded md:p-0 hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                className="block px-3 py-2 text-white rounded md:p-0 hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
                 onClick={closeMobileMenu}
               >
                 Home
@@ -124,7 +124,7 @@ const Navbar2 = () => {
             <li>
               <Link
                 to="/AddCategory"
-                className="block px-3 py-2 text-gray-900 rounded md:p-0 hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                className="block px-3 py-2 text-white rounded md:p-0 hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
                 onClick={closeMobileMenu}
               >
                 Add Category
@@ -133,7 +133,7 @@ const Navbar2 = () => {
             <li>
               <Link
                 to="/PropertyForm"
-                className="block px-3 py-2 text-gray-900 rounded md:p-0 hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                className="block px-3 py-2 text-white rounded md:p-0 hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
                 onClick={closeMobileMenu}
               >
                 Add Properties
@@ -143,7 +143,7 @@ const Navbar2 = () => {
             <li className="relative group">
               <Link
                 to="#"
-                className="block px-3 py-2 text-gray-900 rounded md:p-0 hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                className="block px-3 py-2 text-white rounded md:p-0 hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
               >
                 Menu
               </Link>
@@ -152,7 +152,7 @@ const Navbar2 = () => {
                 <li>
                   <Link
                     to="/users"
-                    className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-white"
+                    className="block px-4 py-2 hover:bg-gray-800 dark:hover:bg-gray-600 dark:text-white"
                     onClick={closeMobileMenu}
                   >
                     Users
@@ -161,7 +161,7 @@ const Navbar2 = () => {
                 <li>
                   <Link
                     to="/category"
-                    className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-white"
+                    className="block px-4 py-2 hover:bg-gray-800 dark:hover:bg-gray-600 dark:text-white"
                     onClick={closeMobileMenu}
                   >
                     Categories
@@ -170,7 +170,7 @@ const Navbar2 = () => {
                 <li>
                   <Link
                     to="/properties"
-                    className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-white"
+                    className="block px-4 py-2 hover:bg-gray-800 dark:hover:bg-gray-600 dark:text-white"
                     onClick={closeMobileMenu}
                   >
                     Properties
@@ -179,7 +179,7 @@ const Navbar2 = () => {
                 <li>
                   <Link
                     to="/enquires"
-                    className="flex  justify-between block px-4 py-2 px-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-white"
+                    className="flex  justify-between block px-4 py-2 px-2 hover:bg-gray-800 dark:hover:bg-gray-600 dark:text-white"
                     onClick={closeMobileMenu}
                   >
                     Enquiries{" "}
@@ -198,7 +198,7 @@ const Navbar2 = () => {
                     handleLogout();
                     closeMobileMenu();
                   }}
-                  className="block px-3 py-2 text-gray-900 rounded md:p-0 hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                  className="block px-3 py-2 text-white rounded md:p-0 hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
                 >
                   Logout
                 </button>
@@ -207,7 +207,7 @@ const Navbar2 = () => {
               <li className="flex">
                 <Link
                   to="/Register"
-                  className="block px-3 py-2 text-gray-900 rounded md:p-0 hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                  className="block px-3 py-2 text-white rounded md:p-0 hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
                   onClick={closeMobileMenu}
                 >
                   Signup
@@ -215,7 +215,7 @@ const Navbar2 = () => {
                 <span className="text-white">/</span>
                 <Link
                   to="/Signin"
-                  className="block px-3 py-2 text-gray-900 rounded md:p-0 hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                  className="block px-3 py-2 text-white rounded md:p-0 hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
                   onClick={closeMobileMenu}
                 >
                   Signin

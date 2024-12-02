@@ -9,7 +9,7 @@ import About from "./component/About.jsx";
 import Contact from "./component/Contact.jsx";
 import Register from "./component/Register.jsx";
 import Signin from "./component/Signin.jsx";
-import OTPPage from "./component/OTPpage.jsx";
+import OTPPage from "./component/OTPPage.jsx";
 import AddCategory from "./component/AddCategory.jsx";
 import PropertyForm from "./component/PropertyForm.jsx";
 import ProtectedRoute from "./component/ProtectedRoute.jsx";
@@ -24,7 +24,7 @@ import EditProperty from "./Admin/EditProperty.jsx";
 
 import CardsGrid from "./component/CardsGrid.jsx";
 import ImageCard from "./component/ImageCard.jsx";
-import VerifyForgot from "./component/VerifyForgot.JSX";
+import VerifyForgot from "./component/VerifyForgot.jsx";
 import PropertyDetail from "./component/PropertyDetail.jsx";
 import SpeedDial from "./component/SpeedDial.jsx";
 import CategoriesCards from "./component/CategoriesCards.jsx";
