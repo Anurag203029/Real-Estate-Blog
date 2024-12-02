@@ -11,7 +11,9 @@
     "server": "cd backend && npm run server",
     "packages": "concurrently \"npm run backend:packages\" \"npm run ui:packages\"",
     "ui:packages": "cd frontend && npm i",
-    "backend:packages": "cd backend && npm i"
+    "backend:packages": "cd backend && npm i",
+    "front-build": "cd frontend && npm run build",
+    "prod": "cd backend && npm run server"
   },
   "author": "",
   "license": "ISC",
