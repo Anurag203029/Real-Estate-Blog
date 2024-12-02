@@ -3,7 +3,7 @@ import { FaPhoneAlt } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import "../Style/contact.css";
+import "../Style/Contact.css";
 import SocialMediaLinks from "./SocialMediaLinks";
 
 const Contact = ({ name }) => {
